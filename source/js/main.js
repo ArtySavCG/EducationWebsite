@@ -1,8 +1,8 @@
 var swiper = new Swiper('.swiper-container', {
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3, // По умолчанию показывает 3 слайда
-    spaceBetween: 26, // Расстояние между слайдами
+    slidesPerView: 3, 
+    spaceBetween: 26, 
     breakpoints: {
         1200: {
             slidesPerView: 3,
@@ -104,32 +104,31 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
         targetSection.scrollIntoView({
             behavior: 'smooth',
-            block: 'start' // 'start', 'center', 'end', or 'nearest'
+            block: 'start' 
         });
     });
 });
 
-// Получаем кнопку
+
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-// Добавляем обработчик события прокрутки
 window.onscroll = function() {
     scrollFunction();
 };
 
 function scrollFunction() {
-    // Проверяем положение прокрутки страницы
+    
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block"; // Показываем кнопку, если прокрутили вниз
+        scrollToTopBtn.style.display = "block"; 
     } else {
-        scrollToTopBtn.style.display = "none"; // Скрываем кнопку, если вернулись наверх
+        scrollToTopBtn.style.display = "none"; 
     }
 }
 
-// Добавляем обработчик события клика для кнопки
+
 scrollToTopBtn.addEventListener('click', function() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Плавная прокрутка наверх
+        behavior: 'smooth'
     });
 });

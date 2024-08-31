@@ -269,7 +269,7 @@ legend {
 }
 
 
-/* Оверлей для затемнения фона */
+/* ---------overlay----------- */
 .overlay {
     position: fixed;
     left: 0;
@@ -297,13 +297,13 @@ legend {
         left: 0;
         width: 50%;
         height: 100vh;
-        background-color: #fff;
+        background-color: var(--light-color);
         flex-direction: column;
         align-items: flex-start;
         padding: 60px 60px;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
-        z-index: 9999; /* Чтобы навигация была поверх контента */
+        z-index: 9999; 
     }
 
 
@@ -344,7 +344,7 @@ legend {
 }
 
 .hero{
-    height: 1078px; /* высота секции 543.95 / 960 (примерная высота экрана) */
+    height: 1078px;
     background: var(--hero-color);
     overflow: hidden;
     padding-top: 62px;
@@ -436,7 +436,7 @@ legend {
     font-weight: 400;
     font-size: 25px;
     line-height: 29px;
-    color: #fff;
+    color: var(--light-color);
     cursor: pointer;
     border: 4px solid transparent;
 }
@@ -686,13 +686,10 @@ legend {
     margin-top: -12px;
 }
 
-
-
-
 .icon-container {
-    display: -webkit-box; /* старый синтаксис для Flexbox */
-    display: -ms-flexbox; /* IE10 */
-    display: flex; /* стандартный синтаксис */
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex;
     justify-content: center;
     align-items: center;
     font-family: var(--subtitle-family);
@@ -760,10 +757,10 @@ legend {
 .item {
     background: var(--light-color);
     box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 14px; /* Префиксы для поддержки старых браузеров */
-    -webkit-border-radius: 14px; /* Safari 3.0+, Chrome 4.0+ */
-    -moz-border-radius: 14px; /* Firefox 3.6+ */
-    -ms-border-radius: 14px; /* IE10+ */
+    border-radius: 14px; 
+    -webkit-border-radius: 14px; 
+    -moz-border-radius: 14px; 
+    -ms-border-radius: 14px; 
     height: 457px;
     padding: 1em;
     transition: box-shadow 0.4s ease-in-out;
@@ -777,10 +774,10 @@ legend {
 
 
 .item-image {
-    border-radius: 14px; /* Префиксы для поддержки старых браузеров */
-    -webkit-border-radius: 14px; /* Safari 3.0+, Chrome 4.0+ */
-    -moz-border-radius: 14px; /* Firefox 3.6+ */
-    -ms-border-radius: 14px; /* IE10+ */
+    border-radius: 14px; 
+    -webkit-border-radius: 14px; 
+    -moz-border-radius: 14px; 
+    -ms-border-radius: 14px;
     margin-bottom: 14px;
 }
 
@@ -790,9 +787,9 @@ legend {
 }
 
 .item-info {
-    display: -webkit-box; /* старый синтаксис для Flexbox */
-    display: -ms-flexbox; /* IE10 */
-    display: flex; /* стандартный синтаксис */
+    display: -webkit-box; 
+    display: -ms-flexbox; 
+    display: flex; 
     gap: 14px;
     margin-bottom: 25px;
 }
@@ -960,7 +957,6 @@ legend {
 
 /*-------about-------*/
 
-
 .about {
     width: 100%;
     height: 636px;
@@ -1007,7 +1003,7 @@ legend {
 }
 
 .about__content_header {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 30px;
@@ -1020,7 +1016,7 @@ legend {
 }
 
 .about__content_description {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
@@ -1080,8 +1076,8 @@ legend {
         font-size: 20px;
     }
 }
-/*===========review============*/
 
+/*----------review--------------*/
 
 .review{
     display: flex;
@@ -1098,7 +1094,7 @@ legend {
 }
 
 .review__title{
-    font-family: 'Poppins';
+    font-family: var(--subtitle-family);
     font-style: normal;
     font-weight: 600;
     font-size: 40px;
@@ -1109,7 +1105,7 @@ legend {
 }
 
 .review__subtitle{
-    font-family: 'Poppins';
+    font-family: var(--subtitle-family);
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -1126,9 +1122,9 @@ legend {
 }
 
 .swiper-container {
-    max-width: 1300px;  /* Устанавливаем максимальную ширину контейнера */
-    max-height: 258px;  /* Устанавливаем максимальную высоту контейнера */
-    width: 100%;  /* Контейнер будет занимать всю доступную ширину до 1300px */
+    max-width: 1300px;  
+    max-height: 258px;  
+    width: 100%; 
     margin: 0 auto;
 }
 
@@ -1139,7 +1135,7 @@ legend {
 .swiper-container .swiper-slide {
     background: var(--light-color);
     box-shadow: 0px 4px 88px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Отключает автоматическое уменьшение размера */
+    flex-shrink: 0; 
     
     opacity: 0;
     pointer-events: none;
@@ -1171,13 +1167,13 @@ legend {
 }
 
 .swiper .swiper-pagination-bullet:hover {
-    background: #4D2C5E;
+    background: var(--purple-color);
     width: 39px;
     height: 14px;
 }
 
 .swiper .swiper-pagination-bullet-active {
-    background: #4D2C5E;
+    background: var(--purple-color);
     width: 39px;
     height: 14px;
     border-radius: 32px;
@@ -1188,7 +1184,7 @@ legend {
 }
 
 .testimonial__quote {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     text-align: left;
@@ -1211,7 +1207,7 @@ legend {
 }
 
 .testimonial__author-name {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
@@ -1222,7 +1218,7 @@ legend {
 }
 
 .testimonial__author-title {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
@@ -1549,6 +1545,7 @@ legend {
         height: 50px;
     }
 }
+
 /*-------footer----------*/
 
 .footer {
@@ -1593,7 +1590,7 @@ legend {
 }
 
 .nav__footer-link {
-    font-family: 'Roboto';
+    font-family: var(--font-family);
     font-style: normal;
     font-weight: 400;
     font-size: 19px;
@@ -1637,25 +1634,25 @@ legend {
     color: #606060;
 }
 #scrollToTopBtn {
-    display: none; /* Скрываем кнопку по умолчанию */
-    position: fixed; /* Фиксированное положение */
-    bottom: 20px; /* Отступ от нижнего края */
-    right: 20px; /* Отступ от правого края */
-    z-index: 9999; /* Положение над другими элементами */
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 9999; 
     font-size: 30px;
     font-weight: 700;
-    background-color: #4D2C5E; /* Цвет фона */
-    color: white; /* Цвет текста */
-    border: none; /* Убираем рамку */
-    outline: none; /* Убираем обводку */
-    cursor: pointer; /* Указатель на кнопке */
+    background-color: var(--purple-color); 
+    color: white;
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
     padding: 0.5em 1em;
     border-radius: 50%;
-    transition: opacity 0.3s; /* Плавное появление */
+    transition: opacity 0.3s; 
     
 }
 #scrollToTopBtn:hover {
-    background-color: #555; /* Цвет фона при наведении */
+    background-color: #555;
 }
 
 @media (max-width:1200px) {
